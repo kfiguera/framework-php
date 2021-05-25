@@ -1,0 +1,19 @@
+{
+  "name": "kfiguera/platzi-frameworks-php",
+  "description": "Proyecto basico",
+  "authors": [
+    {
+      "name": "Kevin Figuera",
+      "email": "kfiguera@smartwebtools.net"
+    }
+  ],
+  "require": {},
+  "autoload": {
+    "psr-4": {
+      "App\\": "app/"
+    },
+    "files": [
+      "app/helpers.php"
+    ]
+  }
+}
