@@ -37,7 +37,7 @@ class Request
     {
         //capitalizar el string del controlador
         $controller = ucfirst($this->controller);
-        return "App\Http\Controllers\{$controller}Controller";
+        return "\App\Http\Controllers\\{$controller}Controller";
     }
 
     /**
@@ -53,10 +53,10 @@ class Request
         $controller = $this->getController();
         $method = $this->getMethod();
 
-        $response = call_user_func(
-            new $controller,
-            $method
-        );
+        $response = call_user_func([
+                new $controller(),
+                $method
+        ]);
         $response->send();
     }
 }
