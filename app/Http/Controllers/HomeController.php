@@ -3,17 +3,16 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Response;
 
 class HomeController
 {
     public function index(){
-        return new Response('home/index');
+        return view('home/index');
     }
     public function contacto(){
-        return new Response('home/contacto');
+        return view('home/contacto');
     }
     public function servicios(){
-        return new Response('home/servicios');
+        return view('home/servicios');
     }
 }
