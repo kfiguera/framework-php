@@ -15,4 +15,8 @@ class HomeController
     public function servicios(){
         return view('home/servicios');
     }
+
+    public function error(){
+        return 'Error';
+    }
 }

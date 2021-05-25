@@ -57,6 +57,17 @@ class Request
                 new $controller(),
                 $method
         ]);
-        $response->send();
+        try {
+            if($response instanceof Response){
+                $response->send();
+            }else{
+                throw new \Exception("Error Procesing Request");
+            }
+
+        }catch (\Throwable $e){
+            echo "Details {$e->getMessage()}";
+        }
+
+
     }
 }
